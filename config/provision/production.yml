@@ -7,10 +7,16 @@
 
     roles:
       - common
+      - yarn
+      - nodejs
       - ruby-common
       - rails
-      - apache
-      - passenger
+      - puma
+      - nginx
       - letsencrypt
+      - nginx
       - postgresql
+      - monit
+      - logrotate
+      - collectd
       - delayed_job

@@ -1,4 +1,4 @@
 ---
-ansible_ssh_host: change-me
+ansible_ssh_host: devops-fakeclient-dev.10fw.net
 ansible_ssh_user: ubuntu
 hostname: devops-fakeclient-dev
