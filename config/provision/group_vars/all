@@ -14,3 +14,5 @@ nodejs_version: '10.x'
 
 #letsencrypt
 letsencrypt_email: 'alerts@tenforwardconsulting.com'
+
+ssl_enabled: true
