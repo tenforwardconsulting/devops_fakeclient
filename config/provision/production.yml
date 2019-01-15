@@ -1,0 +1,16 @@
+---
+  - hosts: production
+    sudo: yes
+
+    vars_files:
+      - ./vars/production.yml
+
+    roles:
+      - common
+      - ruby-common
+      - rails
+      - apache
+      - passenger
+      - letsencrypt
+      - postgresql
+      - delayed_job

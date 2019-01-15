@@ -1,0 +1,11 @@
+# rails
+rails_env: production
+# apache
+server_name: "{{ansible_ssh_host}}"
+
+# postgresql
+postgresql_authentication:
+  - type: local
+    user: "{{database_user}}"
+    database: 'all'
+    method: trust

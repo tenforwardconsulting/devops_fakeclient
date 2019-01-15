@@ -1,0 +1,16 @@
+---
+  - hosts: dev
+    sudo: yes
+
+    vars_files:
+      - ./vars/dev.yml
+
+    roles:
+      - common
+      - ruby-common
+      - rails
+      - apache
+      - passenger
+      - letsencrypt
+      - postgresql
+      - delayed_job

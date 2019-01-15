@@ -1,0 +1,11 @@
+# Hosts that we are aware of -- correspond to hosts/<host>
+production
+dev
+
+# Create a group for each environment which just contains that single host by default
+[production]
+production
+
+[dev]
+dev
+
