@@ -1,8 +1,13 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.0"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, "devops_fakeclient"
+set :repo_url, "git@github.com:tenforwardconsulting/devops_fakeclient.git"
+
+# Default branch is :master
+set :branch, ENV['BRANCH'] || 'master'
+# Default deploy_to directory is /var/www/my_app
+set :deploy_to, '/u/apps/devops_fakeclient'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -23,6 +28,9 @@ set :repo_url, "git@example.com:me/my_repo.git"
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml"
 
+set :linked_files, %w{config/database.yml config/application.yml}
+set :linked_dirs, %w{log tmp/cache vendor/bundle tmp/pids db/backups public/assets public/packs config/puma}
+
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
@@ -37,3 +45,7 @@ set :repo_url, "git@example.com:me/my_repo.git"
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+set :ssh_options, {
+ forward_agent: true
+}

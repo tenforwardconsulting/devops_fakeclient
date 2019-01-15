@@ -49,6 +49,11 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'subspace', '1.0.6'
+  gem "capistrano", "~> 3.11"
+  gem "capistrano-rails", "~> 1.4"
+  #For SSHing with complicated key ciphers
+  gem "ed25519"
+  gem "bcrypt_pbkdf"
 end
 
 group :test do
@@ -61,7 +66,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem "capistrano", "~> 3.11"
-
-gem "capistrano-rails", "~> 1.4"
